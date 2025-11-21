@@ -17,7 +17,6 @@
     <Folder Include="Resources\Images\" />
     <Folder Include="Resources\Images\Icons\" />
     <Folder Include="Resources\Reports\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="Properties\" />
   </ItemGroup>
 
