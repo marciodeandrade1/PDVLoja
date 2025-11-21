@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore; // Add this using directive
+﻿using Microsoft.EntityFrameworkCore; // Add this using directive
+
 
 using PDVLoja.Models;
 
@@ -21,7 +17,7 @@ namespace PDVLoja.Data
             if (!optionsBuilder.IsConfigured)
             {
                 // Use Helpers.ConnectionHelper para connection string
-                optionsBuilder.UseSqlServer(Helpers.ConnectionHelper.GetConnectionString());
+                object value = optionsBuilder.UseSqlServer(Helpers.ConnectionHelper.GetConnectionString());
             }
         }
 
