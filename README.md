@@ -1,4 +1,3 @@
-# PDVLoja
 # PDV Loja Completo
 
 ## Descrição
