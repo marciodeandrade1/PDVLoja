@@ -3,8 +3,8 @@
     public class UsuarioCaixa
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string SenhaHash { get; set; }
+        public required string Nome { get; set; }
+        public required string SenhaHash { get; set; }
 
         public bool Autenticar(string senha)
         {

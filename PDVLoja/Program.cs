@@ -32,10 +32,12 @@ namespace PDVLoja
             services.AddTransient<RelatorioService>();
             services.AddTransient<PagamentoIntegrator>();
             services.AddSingleton<DashboardViewModel>();
+            services.AddTransient<FrmLogin>();
 
             var serviceProvider = services.BuildServiceProvider();
 
-            Application.Run(serviceProvider.GetRequiredService<FrmLogin>());
+             Application.Run(serviceProvider.GetRequiredService<FrmLogin>());
         }
     }
+
 }

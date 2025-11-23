@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore; // Add this using directive
 using PDVLoja.Models;
-using PDVLoja.Models;
+using PDVLoja.Helpers;
 namespace PDVLoja.Data
 {
     public class PdvContext : DbContext
@@ -10,12 +10,14 @@ namespace PDVLoja.Data
         public DbSet<ItemVenda> ItensVenda { get; set; }
         public DbSet<UsuarioCaixa> Usuarios { get; set; }
 
+        public PdvContext(DbContextOptions<PdvContext> options) : base(options) { }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
                 // Use Helpers.ConnectionHelper para connection string
-                object value = optionsBuilder.UseSqlServer(Helpers.ConnectionHelper.GetConnectionString());
+                object value = optionsBuilder.UseSqlServer(ConnectionHelper.GetConnectionString());
             }
         }
 
