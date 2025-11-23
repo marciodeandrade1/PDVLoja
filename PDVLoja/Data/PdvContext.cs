@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore; // Add this using directive
-
-
 using PDVLoja.Models;
-
+using PDVLoja.Models;
 namespace PDVLoja.Data
 {
     public class PdvContext : DbContext
