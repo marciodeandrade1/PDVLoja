@@ -15,9 +15,9 @@ namespace PDVLoja.Forms
             _context = _serviceProvider.GetService<PdvContext>();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            var user = _context.Usuarios.FirstOrDefault(u => u.Nome == txtNome.Text);
+        var user = _context.Usuarios.FirstOrDefault(u => u.Nome == txtNome.Text);
             if (user != null && user.Autenticar(txtSenha.Text))
             {
                 var frmMenu = _serviceProvider.GetService<FrmMenuPrincipal>();
